@@ -1,0 +1,31 @@
+{
+	"name": "ssisir-es",
+	"properties": {
+		"type": "Managed",
+		"typeProperties": {
+			"computeProperties": {
+				"location": "West Europe",
+				"nodeSize": "Standard_D2_v3",
+				"numberOfNodes": 1,
+				"maxParallelExecutionsPerNode": 2,
+				"vNetProperties": {
+					"vNetId": "/subscriptions/b9bb52ab-0dc1-451d-b870-e4fb13d44247/resourceGroups/rd-adf-01/providers/Microsoft.Network/virtualNetworks/vnet-adf-es",
+					"subnet": "default"
+				}
+			},
+			"ssisProperties": {
+				"catalogInfo": {
+					"catalogServerEndpoint": "labazsqlwe01.database.windows.net",
+					"catalogAdminUserName": "sesdata",
+					"catalogAdminPassword": {
+						"type": "SecureString",
+						"value": "**********"
+					},
+					"catalogPricingTier": "S0"
+				},
+				"edition": "Standard",
+				"licenseType": "BasePrice"
+			}
+		}
+	}
+}
